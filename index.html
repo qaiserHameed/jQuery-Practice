@@ -12,10 +12,16 @@
         <h2>Test Box</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ex!</p>
     </div>
-    <button id="fadeOut">fade out</button>
+    <div class="buttons1"><button id="fadeOut">fade out</button>
     <button id="fadeIn">fade in</button>
     <button id="fadeToggle">fade toggle</button>
     <button id="fadeTo">fade to</button>
+</div>
+    <br>
+    <div class="btn2p">
+    <button id="slideDown">slideDown</button>
+    <button id="slideUp">slideUp</button>
+    <button id="slideToggle">slideToggle</button></div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
@@ -39,8 +45,15 @@
             })
 
             // *****************slideDown slideUp slideToggle******************
-
-            
+            $("#slideDown").click(function(){
+                $(".testBox").slideDown();
+            })
+            $("#slideUp").click(function(){
+                $(".testBox").slideUp(2000);
+            })
+            $("#slideToggle").click(function(){
+                $(".testBox").slideToggle(1000);
+            })
         })
     </script>
 </body>
