@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery practice 28 to...</title>
+</head>
+<body>
+    <h1>jQuery fadeIn & fadeOut Method</h1>
+    <div class="testBox">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ex!</p>
+    </div>
+    <button id="fadeOut">fade out</button>
+    <button id="fadeIn">fade in</button>
+    <button id="fadeToggle">fade toggle</button>
+    <button id="fadeTo">fade to</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#fadeOut").click(function(){
+                $(".testBox").fadeOut();
+            })
+            $("#fadeIn").click(function(){
+                $(".testBox").fadeIn(2000);
+            })
+            $("#fadeToggle").click(function(){
+                $(".testBox").fadeToggle(1000);
+            })
+            $("#fadeTo").click(function(){
+                //fadeTo me 3 parameters dene hote hain
+                //$(selector).fadeTo(speed,opacity,callback)
+                $(".testBox").fadeTo(1000,0.5,function(){
+                    console.log("fade to");
+                });
+            })
+
+            // *****************slideDown slideUp slideToggle******************
+
+            
+        })
+    </script>
+</body>
+</html>

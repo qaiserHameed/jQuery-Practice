@@ -1,0 +1,6 @@
+.testBox{
+    border: 2px solid black;
+    background-color: rgb(48, 220, 114);
+    margin-bottom: 20px;
+    padding: 20px;
+}
