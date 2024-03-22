@@ -3,7 +3,9 @@
     background-color: rgb(48, 220, 114);
     margin-bottom: 20px;
     padding: 20px;
+    width: 500px;
+    position: relative;
 }
-.buttons1{
+.buttons1, .btn2p, .btn3p{
     margin-bottom: 10px;
 }

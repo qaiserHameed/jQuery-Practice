@@ -22,13 +22,17 @@
     <button id="slideDown">slideDown</button>
     <button id="slideUp">slideUp</button>
     <button id="slideToggle">slideToggle</button></div>
+    <div class="btn3p">
+        <button id="animate">animate</button>
+        <button id="stop">stop</button>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
 
             $("#fadeOut").click(function(){
-                $(".testBox").fadeOut();
+                $(".testBox").fadeOut(6000);
             })
             $("#fadeIn").click(function(){
                 $(".testBox").fadeIn(2000);
@@ -49,11 +53,23 @@
                 $(".testBox").slideDown();
             })
             $("#slideUp").click(function(){
-                $(".testBox").slideUp(2000);
+                $(".testBox").slideUp(6000);
             })
             $("#slideToggle").click(function(){
                 $(".testBox").slideToggle(1000);
             })
+
+            //*******************animate stop*************************
+            $("#animate").click(function(){
+             $(".testBox").animate({
+             left: '300px',
+             fontSize: "20px"
+             },2000)
+             });
+
+             $("#stop").click(function(){
+             $(".testBox").stop(true,true)
+             })
         })
     </script>
 </body>
